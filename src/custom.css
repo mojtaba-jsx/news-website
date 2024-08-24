@@ -54,6 +54,9 @@
   --whiteColor-25: rgba(255, 255, 255, 25%);
   --whiteColor-10: rgba(255, 255, 255, 10%);
   --whiteColor-5: rgba(255, 255, 255, 5%);
+  /* * ====Gray Color==== */
+  --gray:#F5F5F5;
+
 }
 
 /* * ========= Default Styles ========= */
