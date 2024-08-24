@@ -1,0 +1,68 @@
+/* ^ ======== Font Faces ======= */
+@font-face {
+  font-family: "dana-bold";
+  src: url("./assets/fonts/Dana/DanaFaNum-DemiBold.woff2");
+}
+@font-face {
+  font-family: "dana-medium";
+  src: url("./assets/fonts/Dana/DanaFaNum-Medium.woff2");
+}
+@font-face {
+  font-family: "dana-regular";
+  src: url("./assets/fonts/Dana/DanaFaNum-Regular.woff2");
+}
+
+/* ^ ======== Color Variables ======= */
+
+:root {
+  /* * ====Primary Colors==== */
+  --primaryColor: #f81539;
+  --primaryColor-75: rgba(248, 21, 57, 75%);
+  --primaryColor-50: rgba(248, 21, 57, 50%);
+  --primaryColor-25: rgba(248, 21, 57, 25%);
+  --primaryColor-10: rgba(248, 21, 57, 10%);
+  --primaryColor-5: rgba(248, 21, 57, 5%);
+
+  /* * ====Secondary Colors==== */
+  --secondaryColor: #fc4308;
+  --secondaryColor-75: rgba(252, 67, 8, 75%);
+  --secondaryColor-50: rgba(252, 67, 8, 50%);
+  --secondaryColor-25: rgba(252, 67, 8, 25%);
+  --secondaryColor-10: rgba(252, 67, 8, 10%);
+  --secondaryColor-5: rgba(252, 67, 8, 5%);
+
+  /* * ====Black Colors==== */
+  --blackColor: #3e3232;
+  --blackColor-75: rgba(62, 50, 50, 75%);
+  --blackColor-50: rgba(62, 50, 50, 50%);
+  --blackColor-25: rgba(62, 50, 50, 25%);
+  --blackColor-10: rgba(62, 50, 50, 10%);
+  --blackColor-5: rgba(62, 50, 50, 5%);
+
+  /* * ====Dark Colors==== */
+  --darkColor: #000000;
+  --darkColor-75: rgba(0, 0, 0, 75%);
+  --darkColor-50: rgba(0, 0, 0, 50%);
+  --darkColor-25: rgba(0, 0, 0, 25%);
+  --darkColor-10: rgba(0, 0, 0, 10%);
+  --darkColor-5: rgba(0, 0, 0, 5%);
+
+  /* * ====White Colors==== */
+  --whiteColor: #ffffff;
+  --whiteColor-75: rgba(255, 255, 255, 75%);
+  --whiteColor-50: rgba(255, 255, 255, 50%);
+  --whiteColor-25: rgba(255, 255, 255, 25%);
+  --whiteColor-10: rgba(255, 255, 255, 10%);
+  --whiteColor-5: rgba(255, 255, 255, 5%);
+}
+
+/* * ========= Default Styles ========= */
+body {
+  background-color: var(--whiteColor);
+  direction: rtl;
+}
+*,
+body,
+html {
+  font-family: "dana-medium", Courier, monospace;
+}
