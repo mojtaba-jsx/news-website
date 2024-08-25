@@ -1,7 +1,7 @@
 /* ^ ======== Font Faces ======= */
 @font-face {
   font-family: "dana-bold";
-  src: url("./assets/fonts/Dana/DanaFaNum-DemiBold.woff2");
+  src: url("./assets/fonts/Dana/woff2/DanaFaNum-DemiBold.woff2");
 }
 @font-face {
   font-family: "dana-medium";
@@ -74,5 +74,13 @@ html {
 .container{
   max-width: 1250px;
   margin: 0 auto;
-  background-color: red;
+  /* background-color: red; */
+}
+
+
+li{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
 }
