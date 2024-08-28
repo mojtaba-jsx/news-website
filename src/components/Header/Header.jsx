@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import "../../custom.css";
-import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown } from "react-icons/io";
 import { CiBookmark } from "react-icons/ci";
 import { FcMms } from "react-icons/fc";
@@ -10,11 +9,18 @@ import { FcPhoneAndroid } from "react-icons/fc";
 import { FaBasketballBall } from "react-icons/fa";
 import { FcGraduationCap } from "react-icons/fc";
 import { FcCollaboration } from "react-icons/fc";
+import { IoIosMenu } from "react-icons/io";
+import { CiSearch } from "react-icons/ci";
 function Header() {
   return (
     <>
       <div className="container">
         <nav className="navbar">
+          {/* //! Mobile Menu Btn  */}
+
+          <div className="mobile-menu-btn">
+            <IoIosMenu className="mobile-menu-btn-icon" />
+          </div>
           {/* //! Navbar Logo */}
           <div className="navbar__logo">
             {/* <img
@@ -90,13 +96,13 @@ function Header() {
             </li>
           </ul>
 
+          <div className="navbar__search">
+            <input type="text" className="navbar__search-input" placeholder="جست و جو کنید ..." />
+            <CiSearch className="navbar__search-icon" />
+          </div>
+
           {/* //! Navbar Info */}
           <div className="navbar__info">
-            <div className="navbar__info__input">
-              <input type="text" className="navbar__info__input-tag" />
-              <CiSearch className="navbar__info__input-icon" />
-            </div>
-
             <div className="navbar__info__admin">
               <img
                 src="./src\assets\images\user.png"
