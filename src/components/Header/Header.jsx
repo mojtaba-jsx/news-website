@@ -11,13 +11,16 @@ import { FcGraduationCap } from "react-icons/fc";
 import { FcCollaboration } from "react-icons/fc";
 import { IoIosMenu } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
+import { IoCloseOutline } from "react-icons/io5";
+import { MdChevronRight } from "react-icons/md";
+
 function Header() {
   return (
     <>
       <div className="container">
+        {/* //! Navbar  */}
         <nav className="navbar">
           {/* //! Mobile Menu Btn  */}
-
           <div className="mobile-menu-btn">
             <IoIosMenu className="mobile-menu-btn-icon" />
           </div>
@@ -97,7 +100,11 @@ function Header() {
           </ul>
 
           <div className="navbar__search">
-            <input type="text" className="navbar__search-input" placeholder="جست و جو کنید ..." />
+            <input
+              type="text"
+              className="navbar__search-input"
+              placeholder="جست و جو کنید ..."
+            />
             <CiSearch className="navbar__search-icon" />
           </div>
 
@@ -120,6 +127,45 @@ function Header() {
             </div>
           </div>
         </nav>
+
+        {/* //! Mobile Menu  */}
+
+        <div className="mobile-menu">
+          <div className="mobile-menu__logo">
+            <a href="#" className="mobile-menu__logo-link">
+              مگا نیوز
+            </a>
+            <span className="mobile-menu__logo__close-btn">
+              <IoCloseOutline className="mobile-menu__logo__close-btn-icon" />
+            </span>
+          </div>
+          <ul className="mobile-menu__list">
+            <li className="mobile-menu__item">
+              <a href="#" className="mobile-menu__link">
+                دسته بندی
+                <MdChevronRight className="mobile-menu__item-chevron" />
+              </a>
+              <div className="mobile-menu__submenu"></div>
+            </li>
+            <li className="mobile-menu__item">
+              <a href="#" className="mobile-menu__link">
+                صفحات 
+                <MdChevronRight className="mobile-menu__item-chevron" />
+              </a>
+              <div className="mobile-menu__submenu"></div>
+            </li>
+            <li className="mobile-menu__item">
+              <a href="#" className="mobile-menu__link">
+                ارتباط با ما 
+              </a>
+            </li>
+            <li className="mobile-menu__item">
+              <a href="#" className="mobile-menu__link">
+                درباره ما 
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </>
   );
