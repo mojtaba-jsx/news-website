@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Header.css";
 import "../../custom.css";
 import { IoIosArrowDown } from "react-icons/io";
@@ -12,16 +12,30 @@ import { FcCollaboration } from "react-icons/fc";
 import { IoIosMenu } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { IoCloseOutline } from "react-icons/io5";
-import { MdChevronRight } from "react-icons/md";
+import { MdChevronLeft } from "react-icons/md";
+import { BiSolidCategoryAlt } from "react-icons/bi";
+import { RiPagesLine } from "react-icons/ri";
+import { MdContactPhone } from "react-icons/md";
+import { GrInfo } from "react-icons/gr";
 
 function Header() {
+  const mobileMenuRef = useRef();
+
+  const showMobileMenu = () => {
+    console.log(mobileMenuRef.current.style.display);
+    mobileMenuRef.current.style.display = "block";
+  };
+  const hideMobileMenu = () => {
+    mobileMenuRef.current.style.display = "none";
+  };
+
   return (
     <>
       <div className="container">
         {/* //! Navbar  */}
         <nav className="navbar">
           {/* //! Mobile Menu Btn  */}
-          <div className="mobile-menu-btn">
+          <div className="mobile-menu-btn" onClick={showMobileMenu}>
             <IoIosMenu className="mobile-menu-btn-icon" />
           </div>
           {/* //! Navbar Logo */}
@@ -108,64 +122,53 @@ function Header() {
             <CiSearch className="navbar__search-icon" />
           </div>
 
-          {/* //! Navbar Info */}
-          <div className="navbar__info">
-            <div className="navbar__info__admin">
-              <img
-                src="./src\assets\images\user.png"
-                alt=""
-                className="navbar__info__admin-image"
-              />
-              <span className="navbar__info__admin__name">
-                مجتبی
-                <IoIosArrowDown className="navbar__info__admin__name-icon" />
-              </span>
-            </div>
 
-            <div className="navbar__info__saved">
-              <CiBookmark className="navbar__info__saved-icon" />
-            </div>
-          </div>
         </nav>
+      </div>
 
-        {/* //! Mobile Menu  */}
-
-        <div className="mobile-menu">
-          <div className="mobile-menu__logo">
-            <a href="#" className="mobile-menu__logo-link">
-              مگا نیوز
-            </a>
-            <span className="mobile-menu__logo__close-btn">
-              <IoCloseOutline className="mobile-menu__logo__close-btn-icon" />
-            </span>
-          </div>
-          <ul className="mobile-menu__list">
-            <li className="mobile-menu__item">
-              <a href="#" className="mobile-menu__link">
-                دسته بندی
-                <MdChevronRight className="mobile-menu__item-chevron" />
-              </a>
-              <div className="mobile-menu__submenu"></div>
-            </li>
-            <li className="mobile-menu__item">
-              <a href="#" className="mobile-menu__link">
-                صفحات 
-                <MdChevronRight className="mobile-menu__item-chevron" />
-              </a>
-              <div className="mobile-menu__submenu"></div>
-            </li>
-            <li className="mobile-menu__item">
-              <a href="#" className="mobile-menu__link">
-                ارتباط با ما 
-              </a>
-            </li>
-            <li className="mobile-menu__item">
-              <a href="#" className="mobile-menu__link">
-                درباره ما 
-              </a>
-            </li>
-          </ul>
+      {/* //! Mobile Menu  */}
+      <div className="mobile-menu" ref={mobileMenuRef}>
+        <div className="mobile-menu__logo">
+          <a href="#" className="mobile-menu__logo-link">
+            مگا نیوز
+          </a>
+          <span
+            className="mobile-menu__logo__close-btn"
+            onClick={hideMobileMenu}
+          >
+            <IoCloseOutline className="mobile-menu__logo__close-btn-icon" />
+          </span>
         </div>
+        <ul className="mobile-menu__list">
+          <li className="mobile-menu__item">
+          <BiSolidCategoryAlt className="mobile-menu__item-icon" />
+            <a href="#" className="mobile-menu__link">
+              دسته بندی
+              <MdChevronLeft className="mobile-menu__item-chevron" />
+            </a>
+            <div className="mobile-menu__submenu"></div>
+          </li>
+          <li className="mobile-menu__item">
+          <RiPagesLine className="mobile-menu__item-icon" />
+            <a href="#" className="mobile-menu__link">
+              صفحات
+              <MdChevronLeft className="mobile-menu__item-chevron" />
+            </a>
+            <div className="mobile-menu__submenu"></div>
+          </li>
+          <li className="mobile-menu__item">
+          <MdContactPhone className="mobile-menu__item-icon" />
+            <a href="#" className="mobile-menu__link">
+              ارتباط با ما
+            </a>
+          </li>
+          <li className="mobile-menu__item">
+          <GrInfo className="mobile-menu__item-icon" />
+            <a href="#" className="mobile-menu__link">
+              درباره ما
+            </a>
+          </li>
+        </ul>
       </div>
     </>
   );
