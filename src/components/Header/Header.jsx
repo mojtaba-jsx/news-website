@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Header.css";
 import "../../custom.css";
 import { IoIosArrowDown } from "react-icons/io";
@@ -20,13 +20,41 @@ import { GrInfo } from "react-icons/gr";
 
 function Header() {
   const mobileMenuRef = useRef();
+  const mobileSubMenuRef1 = useRef();
+  const mobileSubMenuRef2 = useRef();
+  const mobileSubMenuChevronRef = useRef();
+
+  const [mobileMenuFlag, setMobileMenuFlag] = useState(false);
 
   const showMobileMenu = () => {
     console.log(mobileMenuRef.current.style.display);
     mobileMenuRef.current.style.display = "block";
+    // mobileSubMenuChevronRef.current.children.style.transform = "rotate(20deg)";
   };
   const hideMobileMenu = () => {
     mobileMenuRef.current.style.display = "none";
+  };
+
+  const showMobileSubMenu1 = () => {
+    if (!mobileMenuFlag) {
+      mobileSubMenuRef1.current.style.display = "flex";
+
+      setMobileMenuFlag(true);
+    } else {
+      mobileSubMenuRef1.current.style.display = "none";
+      setMobileMenuFlag(false);
+    }
+  };
+
+  const showMobileSubMenu2 = () => {
+    if (!mobileMenuFlag) {
+      mobileSubMenuRef2.current.style.display = "flex";
+
+      setMobileMenuFlag(true);
+    } else {
+      mobileSubMenuRef2.current.style.display = "none";
+      setMobileMenuFlag(false);
+    }
   };
 
   return (
@@ -72,7 +100,7 @@ function Header() {
                   <li className="submenu__item">
                     <a href="#" className="submenu__link">
                       تکنولوژی
-                      <FcPhoneAndroid />
+                      <FcPhoneAndroid className="submneu__icon" />
                     </a>
                   </li>
                   <li className="submenu__item">
@@ -121,8 +149,6 @@ function Header() {
             />
             <CiSearch className="navbar__search-icon" />
           </div>
-
-
         </nav>
       </div>
 
@@ -140,30 +166,103 @@ function Header() {
           </span>
         </div>
         <ul className="mobile-menu__list">
-          <li className="mobile-menu__item">
-          <BiSolidCategoryAlt className="mobile-menu__item-icon" />
-            <a href="#" className="mobile-menu__link">
+          <li
+            className="mobile-menu__item mobile-menu__submenu-hover"
+            onClick={showMobileSubMenu1}
+          >
+            <BiSolidCategoryAlt className="mobile-menu__item-icon" />
+            <a
+              href="#"
+              className="mobile-menu__link"
+              ref={mobileSubMenuChevronRef}
+            >
               دسته بندی
               <MdChevronLeft className="mobile-menu__item-chevron" />
             </a>
-            <div className="mobile-menu__submenu"></div>
           </li>
-          <li className="mobile-menu__item">
-          <RiPagesLine className="mobile-menu__item-icon" />
+          {/* //! Mobile Menu SubMneu  */}
+          <ul className="mobile-menu__submenu" ref={mobileSubMenuRef1}>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                سرگرمی
+                <FcMms className="submneu__icon" />
+                
+              </a>
+            </li>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                اقتصادی
+                <FcBullish className="submneu__icon" />
+                
+              </a>
+            </li>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                تکنولوژی
+                <FcPhoneAndroid className="submneu__icon" />
+                
+              </a>
+            </li>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                ورزشی
+                <FaBasketballBall className="submneu__icon" />
+                
+              </a>
+            </li>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                علمی
+                <FcGraduationCap className="submneu__icon" />
+                
+              </a>
+            </li>
+            <li className="mobile-menu__submenu__item">
+              <a href="#" className="mobile-menu__submenu__link">
+                اجتماعی
+                <FcCollaboration className="submneu__icon" />
+                
+              </a>
+            </li>
+          </ul>
+          <li className="mobile-menu__item" onClick={showMobileSubMenu2}>
+            <RiPagesLine className="mobile-menu__item-icon" />
             <a href="#" className="mobile-menu__link">
               صفحات
               <MdChevronLeft className="mobile-menu__item-chevron" />
             </a>
-            <div className="mobile-menu__submenu"></div>
           </li>
+          {/* //! Mobile Menu SubMneu  */}
+          <ul className="mobile-menu__submenu2" ref={mobileSubMenuRef2}>
+            <li className="mobile-menu__submenu2__item">
+              <a href="#" className="mobile-menu__submenu2__link">
+                صفحه 1
+              </a>
+            </li>
+            <li className="mobile-menu__submenu2__item">
+              <a href="#" className="mobile-menu__submenu2__link">
+                صفحه 2
+              </a>
+            </li>
+            <li className="mobile-menu__submenu2__item">
+              <a href="#" className="mobile-menu__submenu2__link">
+                صفحه 3
+              </a>
+            </li>
+            <li className="mobile-menu__submenu2__item">
+              <a href="#" className="mobile-menu__submenu2__link">
+                صفحه 4
+              </a>
+            </li>
+          </ul>
           <li className="mobile-menu__item">
-          <MdContactPhone className="mobile-menu__item-icon" />
+            <MdContactPhone className="mobile-menu__item-icon" />
             <a href="#" className="mobile-menu__link">
               ارتباط با ما
             </a>
           </li>
           <li className="mobile-menu__item">
-          <GrInfo className="mobile-menu__item-icon" />
+            <GrInfo className="mobile-menu__item-icon" />
             <a href="#" className="mobile-menu__link">
               درباره ما
             </a>
