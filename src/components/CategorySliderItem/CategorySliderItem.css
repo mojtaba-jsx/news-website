@@ -1,0 +1,31 @@
+.categorySlider {
+    width: 170px !important;
+    height: 48px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* برای تمایز دادن */
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 48px;
+    position: relative;
+    border-radius: 0.5rem;
+    transition: all 120ms ease-in;
+  }
+
+  .categorySlider:hover{
+    transform: scale(1.04);
+  }
+  .categorySlider-image{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+
+  }
+
+  .categorySlider-title{
+    position: absolute;
+    color: var(--whiteColor);
+    cursor: pointer;
+
+  }

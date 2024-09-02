@@ -1,0 +1,32 @@
+.swiper-wrapper {
+  background-color: var(--gray);
+  margin-top: 2rem;
+  height: 4rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding-bottom: 1rem;
+  line-height: 7rem !important;
+  /* direction: rtl; */
+}
+
+.container {
+  position: relative;
+}
+.swiper-button-prev {
+  position: absolute;
+  color: var(--darkColor) !important;
+  left: -2rem !important;
+}
+.swiper-button-next {
+  position: absolute;
+  color: var(--darkColor) !important;
+  right: -2rem !important;
+
+}
+/* حذف استایل‌های پیش‌فرض Swiper */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none; /* این خط باعث حذف آیکون‌های پیش‌فرض می‌شود */
+}
