@@ -8,7 +8,6 @@
   border-radius: 0.5rem;
   padding-bottom: 1rem;
   line-height: 7rem !important;
-  /* direction: rtl; */
 }
 
 .container {
@@ -23,10 +22,35 @@
   position: absolute;
   color: var(--darkColor) !important;
   right: -2rem !important;
-
 }
 /* حذف استایل‌های پیش‌فرض Swiper */
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none; /* این خط باعث حذف آیکون‌های پیش‌فرض می‌شود */
+}
+
+/* ! Media Queries */
+@media screen and (max-width: 1200px) {
+  .swiper-wrapper {
+    width: 55rem !important;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 920px) {
+  .swiper-wrapper {
+    width: 40rem !important;
+  }
+}
+@media screen and (max-width: 680px) {
+  .swiper-wrapper {
+    width: 30rem !important;
+  }
+}
+@media screen and (max-width: 520px) {
+  .swiper-wrapper {
+    width: 20rem !important;
+  }
 }

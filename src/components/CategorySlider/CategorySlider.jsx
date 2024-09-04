@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./CategorySlider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation"
+import "swiper/css/navigation";
 import CategorySliderItem from "../CategorySliderItem/CategorySliderItem";
 import { Autoplay, Navigation } from "swiper/modules";
 
@@ -54,27 +54,50 @@ function CategorySlider() {
 
   return (
     <>
-
-
       <div className="container">
-
-      <div className="swiper-button-prev"> <IoIosArrowBack /></div>
-      <div className="swiper-button-next"> <IoIosArrowForward /></div>
+        <div className="swiper-button-prev">
+          {" "}
+          <IoIosArrowBack />
+        </div>
+        <div className="swiper-button-next">
+          {" "}
+          <IoIosArrowForward />
+        </div>
         <Swiper
           className="swiper-wrapper"
           modules={[Autoplay, Navigation]} // اضافه کردن ماژول‌های Autoplay و Navigation
           spaceBetween={200}
           slidesPerView={6}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
           }} // تنظیمات ناوبری
           centeredSlides={true}
           centerInsufficientSlides={true}
+          breakpoints={{
+            // وقتی عرض صفحه کمتر از 640 پیکسل است
+            680: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            720: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            // وقتی عرض صفحه بین 640 تا 768 پیکسل است
+            920: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
+            // وقتی عرض صفحه بیشتر از 768 پیکسل است
+            1200: {
+              slidesPerView: 7,
+              spaceBetween: 20,
+            },
+          }}
           loop={true}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
-          
         >
           {sliderInfo.map((slide) => (
             <SwiperSlide key={slide.id}>

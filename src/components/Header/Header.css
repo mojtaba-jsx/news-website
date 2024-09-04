@@ -141,6 +141,9 @@
   box-shadow: var(--primaryColor) 0px 5px, var(--primaryColor-10) 0px 10px,
     var(--primaryColor-5) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
     rgba(240, 46, 170, 0.05) 0px 25px;
+    background-color: var(--whiteColor);
+    z-index: 10000;
+
 }
 
 .submenu__list {
@@ -210,6 +213,7 @@
   display: none;
   top: 0;
   transition: all 120ms ease-in;
+  z-index: 1000;
   /* display: flex;
   flex-direction: column;
   align-items: center; */
@@ -305,11 +309,11 @@
   color: var(--whiteColor);
 }
 
-.mobile-menu__submenu__link{
- display: flex;
- align-items: center;
- justify-content: center;
- gap: 1rem; 
+.mobile-menu__submenu__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .mobile-menu__submenu__link و.mobile-menu__submenu2__link {

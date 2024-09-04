@@ -3,7 +3,7 @@ import "./CategorySliderItem.css";
 function CategorySliderItem({title,image}) {
   return (
     <>
-      <div className="categorySlider">
+      <div className="categorySlider-item">
         <img
           src={image}
           alt="Slider"

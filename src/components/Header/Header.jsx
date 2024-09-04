@@ -29,7 +29,6 @@ function Header() {
   const showMobileMenu = () => {
     console.log(mobileMenuRef.current.style.display);
     mobileMenuRef.current.style.display = "block";
-    // mobileSubMenuChevronRef.current.children.style.transform = "rotate(20deg)";
   };
   const hideMobileMenu = () => {
     mobileMenuRef.current.style.display = "none";

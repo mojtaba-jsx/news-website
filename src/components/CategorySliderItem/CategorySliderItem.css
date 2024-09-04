@@ -1,4 +1,4 @@
-.categorySlider {
+.categorySlider-item {
     width: 170px !important;
     height: 48px !important;
     display: flex;
@@ -11,9 +11,10 @@
     position: relative;
     border-radius: 0.5rem;
     transition: all 120ms ease-in;
+    margin: 0 auto !important;
   }
 
-  .categorySlider:hover{
+  .categorySlider-item:hover{
     transform: scale(1.04);
   }
   .categorySlider-image{
@@ -29,3 +30,11 @@
     cursor: pointer;
 
   }
+
+  @media screen and (max-width: 520px) {
+    .categorySlider-item{
+      width: 200px !important;
+     
+    }
+  }
+  

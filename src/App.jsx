@@ -5,8 +5,8 @@ import CategorySlider from "./components/CategorySlider/CategorySlider";
 function App() {
   return (
     <div>
-      <Header/>
-      <CategorySlider/>
+      <Header />
+      <CategorySlider />
     </div>
   );
 }
