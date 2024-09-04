@@ -1,0 +1,49 @@
+.landing-card {
+  width: 360px;
+  height: 452px;
+  position: relative;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transition: all 120ms ease-in;
+}
+.landing-card:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.landing-card__image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+
+}
+
+.landing-card__infos {
+  width: 339px;
+  height: 61px;
+  position: absolute;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transform: translate(-50%, -50%);
+  top: 84%;
+  left: 50%;
+  backdrop-filter: blur(11px) saturate(7%);
+  -webkit-backdrop-filter: blur(11px) saturate(7%);
+  background-color: rgba(255, 255, 255, 0.68);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.landing-card__infos-title {
+  margin-bottom: 1rem;
+  font-family: 'dana-bold', Courier, monospace;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.landing-card__infos-text {
+  line-height: 16px;
+  font-family: 'dana-medium', Courier, monospace;
+  font-size: 12px;
+}

@@ -1,0 +1,8 @@
+.landing{
+    margin-top: 2rem;
+}
+
+.landing-cards{
+    display: flex;
+    gap: 1rem;
+}
