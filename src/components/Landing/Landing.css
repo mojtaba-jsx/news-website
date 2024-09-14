@@ -1,8 +1,16 @@
 .landing{
     margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    width: 1250px;
+    width: 100%;
 }
 
 .landing-cards{
     display: flex;
     gap: 1rem;
+    width: 60%;
+    width: 625px;
 }
+
+

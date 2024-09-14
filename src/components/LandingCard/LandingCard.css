@@ -20,7 +20,7 @@
 
 .landing-card__infos {
   width: 339px;
-  height: 61px;
+  height: 64px;
   position: absolute;
   width: 80%;
   padding: 1rem;
@@ -38,7 +38,7 @@
 .landing-card__infos-title {
   margin-bottom: 1rem;
   font-family: 'dana-bold', Courier, monospace;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 

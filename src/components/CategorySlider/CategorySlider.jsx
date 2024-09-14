@@ -64,7 +64,7 @@ function CategorySlider() {
           <IoIosArrowForward />
         </div>
         <Swiper
-          className="swiper-wrapper"
+          className="swiper-wrapper1"
           modules={[Autoplay, Navigation]} // اضافه کردن ماژول‌های Autoplay و Navigation
           spaceBetween={200}
           slidesPerView={6}

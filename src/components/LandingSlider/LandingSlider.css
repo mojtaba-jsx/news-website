@@ -1,0 +1,77 @@
+.swiper-wrapper2 {
+  width: 625px !important;
+  height: 452px !important;
+  background-color: red;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  border-radius: 0.5rem;
+  padding-top: none;
+}
+
+.swiper2-container {
+  position: relative;
+}
+
+.swiper2-prev-btn {
+  /* background-color: red; */
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+  z-index: 1000;
+  left: 5px;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper2-next-btn {
+  /* background-color: red; */
+  position: absolute;
+  left: 0;
+  font-size: 10rem;
+  font-size: 1rem;
+  right: 5px;
+  top: 50%;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+}
+
+.swiper-btn {
+  cursor: pointer;
+  background-color: var(--whiteColor);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.swiper-pagination {
+  position: absolute !important; /* برای تغییر موقعیت پگینیشن */
+  top: 0 !important;
+  transform: translateX(-40%) !important; /* مرکز کردن نقاط */
+  z-index: 10; /* تنظیم Z-index برای مطمئن شدن از نمایش بالای عناصر دیگر */
+}
+
+/* استایل‌دهی نقاط پگینیشن */
+.swiper-pagination-bullet {
+  width: 1rem !important;
+  height: 1rem !important;
+  background-color: var(--whiteColor-50) !important;
+  opacity: 0.5;
+  margin: 0 4px;
+  border-radius: 50%;
+  margin-top: 2rem !important;
+  bottom: 1rem;
+  z-index: 100 !important;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.swiper2-container .swiper-pagination-bullet-active {
+  background-color: var(--whiteColor) !important;
+  opacity: 1;
+  width: 2rem !important;
+  height: 1rem !important;
+  border-radius: 1rem !important;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+  border: 1px solid var(--darkColor) !important;
+
+}
