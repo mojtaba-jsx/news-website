@@ -1,7 +1,7 @@
 .swiper-wrapper2 {
   width: 625px !important;
   height: 452px !important;
-  background-color: red;
+  /* background-color: red; */
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 0.5rem;
@@ -56,6 +56,7 @@
   width: 1rem !important;
   height: 1rem !important;
   background-color: var(--whiteColor-50) !important;
+  border: 1px solid var(--darkColor);
   opacity: 0.5;
   margin: 0 4px;
   border-radius: 50%;
@@ -71,7 +72,41 @@
   width: 2rem !important;
   height: 1rem !important;
   border-radius: 1rem !important;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset !important;
   border: 1px solid var(--darkColor) !important;
+}
 
+/* !=======Responsive======= */
+
+@media (max-width: 1400px) {
+  /* * Landing Slider */
+  .swiper-wrapper2 {
+    width: 100% !important;
+    height: 452px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Small Desktop */
+}
+
+@media (max-width: 992px) {
+  /* Tablet Landscape */
+}
+
+@media (max-width: 768px) {
+  /* Tablet Portrait */
+}
+
+@media (max-width: 576px) {
+  /* Large Mobile */
+}
+
+@media (max-width: 480px) {
+  /* Medium Mobile */
+}
+
+@media (max-width: 320px) {
+  /* Small Mobile */
 }
