@@ -1,0 +1,25 @@
+
+.football{
+    margin-top: 2rem;
+    height: 464px;
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url('../../assets/images/Football/stadium.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    position: relative;
+}
+.football::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* شفافیت پس‌زمینه */
+    backdrop-filter: blur(2px); /* بلور بر روی پس‌زمینه */
+}

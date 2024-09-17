@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import CategorySlider from "./components/CategorySlider/CategorySlider";
 import Landing from "./components/Landing/Landing";
 import PopularPosts from './components/PopularPosts/PopularPosts'
+import Football from './components/Football/Football'
 function App() {
   return (
     <div>
@@ -11,6 +12,7 @@ function App() {
       <CategorySlider />
       <Landing/>
       <PopularPosts/>
+      <Football/>
     </div>
   );
 }

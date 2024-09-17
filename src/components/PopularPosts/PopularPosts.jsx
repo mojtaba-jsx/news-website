@@ -85,10 +85,10 @@ function PopularPosts() {
           modules={[Navigation]}
           spaceBetween={100}
           slidesPerView={4}
-          // autoplay={{
-          //   delay: 3000,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           navigation={{
             nextEl: ".swiper3-next-btn",
             prevEl: ".swiper3-prev-btn",
