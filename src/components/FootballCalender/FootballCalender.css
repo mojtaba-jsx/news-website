@@ -1,0 +1,68 @@
+.football-calender {
+  position: absolute;
+  z-index: 1000;
+}
+
+/* تغییر ظاهر کل تقویم با border-radius */
+.react-calendar {
+  background-color: var(--whiteColor);
+  border-radius: 15px; /* مقدار دلخواه border-radius */
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  width: 30rem;
+}
+
+/* تغییر اندازه‌ی فونت هر سلول از تقویم */
+.react-calendar__tile {
+  font-size: 18px; /* مقدار دلخواه فونت */
+  text-decoration: none;
+}
+
+/* تغییر اندازه‌ی فونت روزهای هدر (روزهای هفته) */
+.react-calendar__month-view__weekdays__weekday {
+  font-size: 16px; /* مقدار دلخواه فونت برای روزهای هفته */
+  font-weight: bold;
+}
+
+/* حذف خط زیر نام روزهای هفته */
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none; /* حذف زیرخط */
+  font-family: 'dana-bold', Courier, monospace;
+  text-align: center;
+}
+
+.react-calendar__tile {
+  width: 50px; /* عرض سلول */
+  height: 50px; /* ارتفاع سلول */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* تنظیم مجدد اندازه فونت اگر نیاز است */
+position: relative;
+}
+
+/* تغییر اندازه سلول‌های روزهای هفته */
+.react-calendar__month-view__weekdays__weekday {
+  width: 50px; /* عرض سلول‌های هدر */
+  height: 50px; /* ارتفاع سلول‌های هدر */
+  text-align: center;
+  font-weight: bold;
+}
+
+/* تغییر اندازه سلول‌های هدر (روزهای هفته) */
+.react-calendar__month-view__weekdays__weekday {
+  height: 50px; /* تنظیم ارتفاع بیشتر برای روزهای هفته */
+  line-height: 50px; /* خط‌چین برای عمودی مرکز کردن متن */
+  text-align: center; /* متن در وسط سلول قرار می‌گیرد */
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap; /* جلوگیری از شکستگی متن */
+}
+.hide-day-number .react-calendar__tile {
+    color: transparent; /* رنگ متن روز را شفاف می‌کند */
+    position: relative;
+  }
+  
+  .hide-day-number .react-calendar__tile:before {
+    content: none; /* حذف محتوا */
+  }
