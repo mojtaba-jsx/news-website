@@ -1,0 +1,77 @@
+.table__wrapper {
+  border-radius: 1rem;
+  z-index: 100;
+  overflow: hidden; /* جلوگیری از بروز مشکلات در گوشه‌ها */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.football-table {
+  z-index: 100;
+  background-color: var(--whiteColor);
+  overflow: hidden;
+  overflow-y: auto;
+  width: 616px;
+  height: 334px;
+  border-radius: 1rem;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-collapse: separate;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  /* display: none; */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.football-table::-webkit-scrollbar-track {
+  background: var(--whiteColor);
+}
+.football-table::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--darkColor-25);
+  transition: all 120ms ease-in;
+}
+
+.football-table::-webkit-scrollbar-thumb:hover {
+  background: var(--darkColor-50);
+  cursor: pointer;
+}
+
+td,
+th {
+  text-align: center;
+  padding: 8px;
+}
+tr {
+  transition: all 120ms ease-in;
+}
+
+tr:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.football-table__logo-image {
+  width: 20px;
+  height: 24px;
+}
+
+.football-table__logo {
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+}
+
+.football-table__team {
+  font-weight: bold;
+}

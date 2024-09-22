@@ -1,8 +1,9 @@
 
 .football{
     margin-top: 2rem;
-    height: 464px;
+    height: 600px;
     margin-bottom: 4rem;
+    gap: 10rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
