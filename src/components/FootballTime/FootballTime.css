@@ -1,0 +1,97 @@
+.football-time {
+  background-color: var(--whiteColor);
+  width: 478px;
+  height: 334px;
+  margin-left: 2rem;
+  z-index: 1000;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.football-time__title {
+  text-align: center;
+  font-family: "dana-bold", Courier, monospace;
+  font-size: 1.2rem;
+}
+
+.football-time__infos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.football-time__infos-image {
+  width: 7rem;
+  height: 7rem;
+}
+
+.football-time__infos-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.football-time__infos-texts__vs {
+  color: var(--primaryColor);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.football-time__scores {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.football-time__scores-team1 {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 1rem;
+  width: 10rem;
+  text-align: center;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.football-time__scores-team2 {
+  background-color: var(--lightNavyBlue);
+  color: var(--whiteColor);
+  padding: 1rem;
+  width: 10rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.football-time__scores-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.football-time__scores-goal1,
+.football-time__scores-goal2 {
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: "Franklin Gothic Medium";
+  font-weight: bold;
+  background-color: var(--darkColor);
+  display: flex;
+  color: var(--whiteColor);
+
+}
+
+.football-time__scores-goal1{
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.football-time__scores-goal2{
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
