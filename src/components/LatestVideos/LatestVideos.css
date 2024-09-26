@@ -1,0 +1,27 @@
+.latest-videos{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.latest-videos__title {
+    font-size: 2rem;
+    position: relative;
+  }
+  .latest-videos__title::before {
+    position: absolute;
+    content: "";
+    right: -1rem;
+    width: 8px;
+    height: 20px;
+    border-radius: 1rem;
+    background-color: var(--primaryColor);
+  }
+  
+  .latest-videos-box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+

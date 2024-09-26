@@ -6,6 +6,7 @@ import Landing from "./components/Landing/Landing";
 import PopularPosts from './components/PopularPosts/PopularPosts'
 import Football from './components/Football/Football'
 import NewPosts from './components/NewPosts/NewPosts'
+import LatestVideos from './components/LatestVideos/LatestVideos'
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
       <PopularPosts/>
       <Football/>
       <NewPosts/>
+      <LatestVideos/>
     </div>
   );
 }
