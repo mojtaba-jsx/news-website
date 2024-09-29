@@ -63,3 +63,43 @@
 .latest-video__btn-icon:hover {
   transform: scale(1.08);
 }
+
+
+
+/* !=======Responsive======= */
+@media (max-width: 1400px) { 
+  .latest-video{
+    width:80%;
+    margin: 1rem auto;
+  }
+  }
+  
+  @media (max-width: 1200px) { 
+    /* Small Desktop */
+  }
+  
+  @media (max-width: 992px) { 
+    /* Tablet Landscape */
+  }
+  
+  @media (max-width: 768px) { 
+    /* Tablet Portrait */
+    .landing-slide__info {
+      width: 20rem;
+    }
+  }
+  
+  @media (max-width: 576px) { 
+    /* Large Mobile */
+  }
+  
+  @media (max-width: 480px) { 
+    /* Medium Mobile */
+    .landing-slide__info {
+      width: 14rem;
+    }
+  }
+  
+  @media (max-width: 320px) { 
+    /* Small Mobile */
+  }
