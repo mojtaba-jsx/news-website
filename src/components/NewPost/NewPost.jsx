@@ -2,7 +2,6 @@ import React from "react";
 import "./NewPost.css";
 import { CiBookmark } from "react-icons/ci";
 function NewPost({
-  key,
   title,
   text,
   image,

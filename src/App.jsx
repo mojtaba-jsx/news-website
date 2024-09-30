@@ -7,6 +7,8 @@ import PopularPosts from './components/PopularPosts/PopularPosts'
 import Football from './components/Football/Football'
 import NewPosts from './components/NewPosts/NewPosts'
 import LatestVideos from './components/LatestVideos/LatestVideos'
+import Weather from './components/Weather/Weather'
+
 function App() {
   return (
     <div>
@@ -17,6 +19,7 @@ function App() {
       <Football/>
       <NewPosts/>
       <LatestVideos/>
+      <Weather/>
     </div>
   );
 }

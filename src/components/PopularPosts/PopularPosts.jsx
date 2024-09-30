@@ -97,8 +97,8 @@ function PopularPosts() {
           centerInsufficientSlides={true}
           pagination={{ clickable: true }}
           loop={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
             // موبایل‌های کوچک (320px تا 480px)
             320: {

@@ -56,8 +56,8 @@ function LandingSlider() {
           centerInsufficientSlides={true}
           pagination={{ clickable: true }}
           loop={true}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
         >
           {slidesInfo.map((slide) => (
             <SwiperSlide key={slide.id}>
